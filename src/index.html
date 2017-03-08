@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Job Application</title>
+
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+        <style>
+            /*
+                In case you were wondering... this is NOT how you should do styling...
+                This should all be in a different file (like "styles.css" or something)!
+            */
+            .alert { display: none; }
+            form, .alert { width: 60%; margin: 0 auto; }
+            .checkbox h3 { margin: 0; font-size: 1em; font-weight: 700; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class='text-center'>Job Application</h1>
+
+            <p id='results' class='alert alert-success'></p>
+        </header>
+
+        <!-- You might want to change the requestb.in URL below to your own! -->
+        <form action='http://requestb.in/13w63tg1' method='post' class='form-horizontal'>
+
+            <fieldset>
+                <legend>Your Info</legend>
+
+                <section class='form-group'>
+                    <label for='full-name' class='col-sm-3 control-label'>Full Name</label>
+                    <aside class='col-sm-9'>
+                        <input type='text' name='full-name' id='full-name' placeholder='Jane Doe' class='form-control' required>
+                    </aside>
+                </section>
+
+                <section class='form-group'>
+                    <label for='exp' class='col-sm-3 control-label'>Experience</label>
+                    <aside class='col-sm-9'>
+                        <input type='range' name='exp' id='exp' step='1' min='0' max='20' value='5'>
+                        <figure>5 years</figure>
+                    </aside>
+                </section>
+
+                <section class='form-group checkbox'>
+                    <h3 class='col-sm-3 control-label'>Languages</h3>
+                    <aside class='col-sm-9'>
+                        <label for='languages-js' class='checkbox-inline'>
+                            <input type='checkbox' name='languages' id='languages-js'>
+                            JS
+                        </label>
+                        <label for='languages-html' class='checkbox-inline'>
+                            <input type='checkbox' name='languages' id='languages-html'>
+                            HTML
+                        </label>
+                        <label for='languages-css' class='checkbox-inline'>
+                            <input type='checkbox' name='languages' id='languages-css'>
+                            CSS
+                        </label>
+                        <figure>0 languages</figure>
+                    </aside>
+                </section>
+            </fieldset>
+
+            <fieldset>
+                <legend>References</legend>
+
+                <section class='form-group'>
+                    <label for='work-url' class='col-sm-3 control-label'>Previous Work URL</label>
+                    <aside class='col-sm-9'>
+                        <input type='url' name='work-url' id='work-url' placeholder='http://old-company.com' class='form-control'>
+                    </aside>
+                </section>
+            </fieldset>
+
+            <aside class='form-group text-center'>
+                <input type='reset' value='Start Over' class='btn btn-warning'>
+                <input type='submit' value='Apply Now!' class='btn btn-success'>
+            </aside>
+
+        </form>
+
+    </body>
+</html>
