@@ -1,9 +1,9 @@
 (function appModule() {
-      'use strict';
+    'use strict';
     window.jobApp = {};
 
 
-    document.querySelector('#full-name').addEventListener('blur', function checkLength(/*eventObj*/) {
+    document.querySelector('#full-name').addEventListener('blur', function checkLength( /*eventObj*/ ) {
         // console.log("off the box!!!"); eventObj.target.value
         if (document.querySelector('#full-name').value.length === 0) {
             // console.log("You aint got not text!!!");
@@ -23,7 +23,7 @@
         // console.log(NodeList.item(figure));
         eventObj.target.parentNode.childNodes[3].innerText = eventObj.target.value + ' years';
         // document.querySelector('figure').innerText = eventObj.target.value + ' years';
-        console.log(/*exp*/);
+        console.log( /*exp*/ );
     });
 
 
@@ -44,6 +44,6 @@
 
         });
 
-        console.log('app module');
+    console.log('app module');
 
 })();

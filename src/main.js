@@ -1,3 +1,5 @@
+
+
 (function() {
     'use strict';
     window.jobApp = window.jobApp || {};
@@ -12,6 +14,7 @@
             $('#results').append('Your application has been successfully submitted.');
             console.log('prevention');
         } else {
+            alert('You have already submitted your application.');
             return;
         }
 
