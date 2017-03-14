@@ -1,20 +1,20 @@
-
-
-(function (){
+(function() {
     'use strict';
-      window.jobApp = window.jobApp || {};
+    window.jobApp = window.jobApp || {};
 
-
-  console.log('apply module');// says hey-Im in the main.js apply module
-  let submitCount = 0;
-    $('.form-horizontal').submit(function(event){//targets the form then the submit event
+    let subCount = 1;
+    console.log('apply module'); // says hey-Im in the main.js apply module
+    $('.form-horizontal').submit(function(event) { //targets the form then the submit event
         event.preventDefault(); //prevents the submit button from inputing to request bin
-        submitCount = submitCount ++;
-        $(' .alert').css('display', 'block');
-          $('#results').append('Your application has been successfully submitted.');
-              console.log('prevention');
-              return;
-            });
+        if (subCount === 1) {
+            subCount = subCount + 1;
+            $(' .alert').css('display', 'block');
+            $('#results').append('Your application has been successfully submitted.');
+            console.log('prevention');
+        } else {
+            return;
+        }
 
+    });
 
 })();
