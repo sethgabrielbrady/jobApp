@@ -39,10 +39,11 @@
                 }
                 console.log(eventObj.target.parentNode.parentNode.childNodes); //has a nodelist [9]
                 eventObj.target.parentNode.parentNode.childNodes[7].innerText = checkCount + 'languages';
-
+                // document.querySelector('figure').innerText = checkCount + 'languages';
             });
 
         });
 
+        console.log('app module');
 
 })();
